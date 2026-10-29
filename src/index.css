@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    /* Luminous mid-deep twilight gradient (Not pitch black, not washed out white) */
+    background: linear-gradient(180deg, #121D31 0%, #182844 50%, #131E33 100%);
+    background-attachment: fixed;
+    color: #F8FAFC;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Prevent iOS zoom on form inputs by ensuring 16px minimum font size */
+  input, select, textarea {
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+
+  /* Custom refined scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #101B2E;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2D4368;
+    border-radius: 9999px;
+    border: 2px solid #101B2E;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F59E0B;
+  }
+}
+
+/* Rich metallic and gradient text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FEF08A 0%, #F59E0B 45%, #D97706 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.silver-gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-gradient-text {
+  background: linear-gradient(135deg, #93C5FD 0%, #60A5FA 50%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luminous Glass Cards for the medium-tone background */
+.card-gloss {
+  background: linear-gradient(180deg, rgba(30, 48, 79, 0.75) 0%, rgba(20, 34, 58, 0.85) 100%);
+  border: 1px solid rgba(147, 197, 253, 0.15);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.35);
+}
+
+.card-gloss-hover:hover {
+  background: linear-gradient(180deg, rgba(38, 60, 98, 0.85) 0%, rgba(26, 44, 74, 0.95) 100%);
+  border-color: rgba(245, 158, 11, 0.45);
+  box-shadow: 0 15px 35px -10px rgba(245, 158, 11, 0.2);
+}
+
+/* Ambient glow blobs */
+.glow-sapphire {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(59, 130, 246, 0) 70%);
+}
+
+.glow-amber {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%);
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Luminous Traveling Border Animation */
+@keyframes borderRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-border-spin {
+  animation: borderRotate 6s linear infinite;
+}
+
+.border-beam-gold {
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    transparent 0deg,
+    transparent 60deg,
+    rgba(245, 158, 11, 0.15) 90deg,
+    #F59E0B 120deg,
+    #FFFBEB 135deg,
+    #F59E0B 150deg,
+    rgba(245, 158, 11, 0.15) 180deg,
+    transparent 210deg,
+    transparent 360deg
+  );
+}
+
+.border-beam-dual-gold {
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    transparent 0deg,
+    rgba(245, 158, 11, 0.15) 30deg,
+    #F59E0B 60deg,
+    #FFF4B8 90deg,
+    #D97706 115deg,
+    transparent 145deg,
+    transparent 180deg,
+    rgba(245, 158, 11, 0.15) 210deg,
+    #F59E0B 240deg,
+    #FFF4B8 270deg,
+    #D97706 295deg,
+    transparent 325deg,
+    transparent 360deg
+  );
+}
+
+@keyframes luxuryBorderGlow {
+  0%, 100% {
+    border-color: rgba(245, 158, 11, 0.35);
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+  }
+  50% {
+    border-color: rgba(245, 158, 11, 0.75);
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.35);
+  }
+}
+
+.animate-border-glow {
+  animation: luxuryBorderGlow 4s ease-in-out infinite;
+}

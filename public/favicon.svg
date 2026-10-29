@@ -1,0 +1,21 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dtGoldFoil" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF4B8" />
+      <stop offset="25%" stop-color="#FBBF24" />
+      <stop offset="55%" stop-color="#F59E0B" />
+      <stop offset="85%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+    <linearGradient id="dtShieldCore" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3154" />
+      <stop offset="50%" stop-color="#14223A" />
+      <stop offset="100%" stop-color="#0B1322" />
+    </linearGradient>
+  </defs>
+  <path d="M50 6 L86 19 C86 52 70 82 50 94 C30 82 14 52 14 19 Z" fill="url(#dtShieldCore)" stroke="url(#dtGoldFoil)" stroke-width="4" />
+  <path d="M50 13 L79 23 C79 50 66 75 50 86 C34 75 21 50 21 23 Z" fill="none" stroke="rgba(251, 191, 36, 0.4)" stroke-width="1.5" />
+  <path d="M28 35 H72 M50 35 V66" stroke="url(#dtGoldFoil)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M36 35 H52 C65 35 72 43 72 50.5 C72 58 65 66 52 66 H36" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <polygon points="50,15 52,21 58,23 52,25 50,31 48,25 42,23 48,21" fill="url(#dtGoldFoil)" />
+</svg>
